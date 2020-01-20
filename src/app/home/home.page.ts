@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  weight: number;
+  gender: string;
+  time: number;
+  bottles: number;
+  promilles: number;
+
   constructor() {}
 
+  
 }
