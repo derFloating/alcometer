@@ -7,5 +7,41 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-    
+  <ion-list>
+    <ion-item>
+      <ion-label>Weight</ion-label>
+      <ion-input type="number" name="weight" [(ngModel)]="weight"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender" interface="popover" placeholder="Select gender">
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Time</ion-label>
+      <ion-select [(ngModel)]="time" interface="popover" placeholder="Select hour(s)">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bottles</ion-label>
+      <ion-select [(ngModel)]="bottles" interface="popover" placeholder="Select number of bottle(s)">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Promilles</ion-label>
+      <ion-input type="number" name="promilles" readonly [value]="promilles"></ion-input>
+    </ion-item>
+  </ion-list>
 </ion-content>
