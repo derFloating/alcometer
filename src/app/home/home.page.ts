@@ -21,10 +21,10 @@ export class HomePage {
     const burning = this.weight / 10;
     grams -= (burning * this.time);
 
-    if(this.gender === 'male') {
-      this.promilles =  grams / (this.weight * 0.7);
+    if (this.gender === 'male') {
+      this.promilles =  Math.round((grams / (this.weight * 0.7)) * 100) / 100;
     } else {
-      this.promilles =  grams / (this.weight * 0.6);
+      this.promilles =  Math.round((grams / (this.weight * 0.6)) * 100) / 100;
     }
   }
 }
