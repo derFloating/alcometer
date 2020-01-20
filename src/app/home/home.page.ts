@@ -22,9 +22,13 @@ export class HomePage {
     grams -= (burning * this.time);
 
     if (this.gender === 'male') {
-      this.promilles =  Math.round((grams / (this.weight * 0.7)) * 100) / 100;
+      this.promilles =  grams / (this.weight * 0.7);
     } else {
-      this.promilles =  Math.round((grams / (this.weight * 0.6)) * 100) / 100;
+      this.promilles =  grams / (this.weight * 0.6);
+    }
+
+    if (this.promilles < 0) {
+      this.promilles = 0;
     }
   }
 }
