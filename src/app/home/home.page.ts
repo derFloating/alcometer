@@ -15,5 +15,16 @@ export class HomePage {
 
   constructor() {}
 
-  
+  calculate() {
+    const litres = this.bottles * 0.33;
+    let grams = litres * 8 * 4.5;
+    const burning = this.weight / 10;
+    grams -= (burning * this.time);
+
+    if(this.gender === 'male') {
+      this.promilles =  grams / (this.weight * 0.7);
+    } else {
+      this.promilles =  grams / (this.weight * 0.6);
+    }
+  }
 }
