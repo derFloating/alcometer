@@ -15,28 +15,19 @@
     <ion-item>
       <ion-label>Gender</ion-label>
       <ion-select [(ngModel)]="gender" interface="popover" placeholder="Select gender">
-        <ion-select-option value="male">Male</ion-select-option>
-        <ion-select-option value="female">Female</ion-select-option>
+        <ion-select-option *ngFor="let i of ['male', 'female']" value="{{i}}">{{i}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Time</ion-label>
       <ion-select [(ngModel)]="time" interface="popover" placeholder="Select hour(s)">
-        <ion-select-option value="1">1</ion-select-option>
-        <ion-select-option value="2">2</ion-select-option>
-        <ion-select-option value="3">3</ion-select-option>
-        <ion-select-option value="4">4</ion-select-option>
-        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option *ngFor="let i of [1,2,3,4,5]" value="{{i}}">{{i}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Bottles</ion-label>
       <ion-select [(ngModel)]="bottles" interface="popover" placeholder="Select number of bottle(s)">
-        <ion-select-option value="1">1</ion-select-option>
-        <ion-select-option value="2">2</ion-select-option>
-        <ion-select-option value="3">3</ion-select-option>
-        <ion-select-option value="4">4</ion-select-option>
-        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option *ngFor="let i of [1,2,3,4,5]" value="{{i}}">{{i}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
